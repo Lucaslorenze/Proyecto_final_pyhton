@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from AppLucas.views import mostrar_mi_template, saludo, saludo_dos monstrar_familiares
+from AppLucas.views import mostrar_mi_template, saludo, saludo_dos, monstrar_familiares
 from blog.views import index as blog_index
 
 urlpatterns = [

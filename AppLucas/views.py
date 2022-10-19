@@ -1,7 +1,7 @@
 from multiprocessing import reduction
 from django.shortcuts import render
 from django.http import HttpResponse
-from datetime import date
+from AppLucas.models import Familiar
 
 # Create your views here.
 
@@ -17,6 +17,8 @@ def mostrar_mi_template(request):
         "nombre":"Lucas",
         "apellido":"Lorenzo"
         })
-def fecha(request):
-    fecha_actual = date.today()
-    return fecha_actual
+
+def monstrar_familiares(request):
+  lista_familiares = Familiar.objects.all()
+  return render(request, "AppLucas/familiares.html", {"lista_familiares": lista_familiares}) # Esto se llama contexto
+  
