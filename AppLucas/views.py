@@ -20,7 +20,3 @@ def mostrar_mi_template(request):
 def fecha(request):
     fecha_actual = date.today()
     return fecha_actual
-
-def imc(request, peso, altura):
-    imc = peso / (altura**2)
-    return render(request, "AppLucas/IMC.html"),{"imc":imc}
